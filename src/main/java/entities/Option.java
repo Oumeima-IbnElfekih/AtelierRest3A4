@@ -1,7 +1,8 @@
 package entities;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
-
+@XmlRootElement
 public class Option {
     private int codeOption;
     private String libelle,domaine,responsable;

@@ -55,7 +55,7 @@ public class OptionRessources {
     // par le serveur au client.
     // Ici, la réponse contenant les options est au format JSON.
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getListOptions(
+    public List<Option> getListOptions(
 
             // @QueryParam("domaine") récupère la valeur du paramètre
             // "domaine" présent dans la chaîne de requête de l'URL.
@@ -92,9 +92,9 @@ public class OptionRessources {
 
             // Retourne HTTP 404 Not Found.
             // Cela signifie ici qu'aucune option n'a été trouvée.
-            return Response.status(Status.NOT_FOUND).build();
+            return null;
 
-        return Response.status(Status.OK).entity(res).build();
+        return res;
     }
 
 
